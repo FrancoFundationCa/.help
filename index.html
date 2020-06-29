@@ -23,6 +23,8 @@ Card card = Card.create(params);
 <form method="POST" action="/create_customer_portal_session">
 
     <button type="submit">Manage billing</button>
+  
+  <script>
 
   const stripe = require('stripe')('sk_test_51GzQSCEB51I86J7DCIEdDqYZjxKTgXTKIdy7bi8at1gTAC1LESHAzWkGSbIDvJAJRTXPSy8s9noIkPwyqcui9Gko00dktYw7Gp');
 
@@ -33,4 +35,5 @@ var session = await stripe.billingPortal.sessions.create({
   return_url: 'https://example.com/account',
 
 });
+    <script>
 </form>
