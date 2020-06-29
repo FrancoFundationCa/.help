@@ -24,4 +24,13 @@ Card card = Card.create(params);
 
     <button type="submit">Manage billing</button>
 
+  const stripe = require('stripe')('sk_test_51GzQSCEB51I86J7DCIEdDqYZjxKTgXTKIdy7bi8at1gTAC1LESHAzWkGSbIDvJAJRTXPSy8s9noIkPwyqcui9Gko00dktYw7Gp');
+
+var session = await stripe.billingPortal.sessions.create({
+
+  customer: 'cus_HYYmuVv66LvaDY',
+
+  return_url: 'https://example.com/account',
+
+});
 </form>
